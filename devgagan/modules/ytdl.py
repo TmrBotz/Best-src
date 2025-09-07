@@ -150,7 +150,7 @@ async def process_audio(client, event, url, cookies_env_var=None):
                 name=None,
                 progress_bar_function=lambda done, total: progress_callback(done, total, chat_id)
             )
-            await client.send_file(chat_id, uploaded, caption=f"**{title}**\n\n**__Powered by Team SPY__**")
+            await client.send_file(chat_id, uploaded, caption=f"**{title}**\n\n**__Powered by Zero Botz__**")
             if prog:
                 await prog.delete()
         else:
@@ -458,7 +458,7 @@ async def split_and_upload_file(app, sender, file_path, caption):
             part_caption = f"{caption} \n\n**Part : {part_number + 1}**"
             await app.send_document(sender, document=part_file, caption=part_caption,
                 progress=progress_bar,
-                progress_args=("╭─────────────────────╮\n│      **__Zero Bots Uploader__**\n├─────────────────────", edit, time.time())
+                progress_args=("╭─────────────────────╮\n│      **__Zero Botz Uploader__**\n├─────────────────────", edit, time.time())
             )
             await edit.delete()
             os.remove(part_file)  # Cleanup after upload
