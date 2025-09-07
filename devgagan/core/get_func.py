@@ -208,7 +208,7 @@ class ProgressManager:
             f"│ **__Speed:__** {speed_mbps:.2f} Mbps\n"
             f"│ **__ETA:__** {eta_min:.2f} min\n"
             f"╰──────────────────╯\n\n"
-            f"**__Powered by Team SPY__**"
+            f"**__Powered by Zero Botz__**"
         )
 
 class CaptionFormatter:
@@ -325,7 +325,7 @@ class FileOperations:
                             caption=part_caption,
                             reply_to_message_id=topic_id,
                             progress=progress_bar,
-                            progress_args=("╭──────────────╮\n│ **__Pyro Uploader__**\n├────────", edit_msg, time.time())
+                            progress_args=("╭──────────────╮\n│ **__Zero Botz Uploader__**\n├────────", edit_msg, time.time())
                         )
                         await result.copy(LOG_GROUP)
                         await edit_msg.delete()
@@ -401,7 +401,7 @@ class SmartTelegramBot:
         file_type = self.media_processor.get_file_type(file_path)
         thumb_path = self.get_thumbnail_path(user_id)
         
-        progress_args = ("╭──────────────╮\n│ **__Pyro Uploader__**\n├────────", edit_msg, time.time())
+        progress_args = ("╭──────────────╮\n│ **__Zero Botz Uploader__**\n├────────", edit_msg, time.time())
         
         try:
             if file_type == 'video':
@@ -595,7 +595,7 @@ class SmartTelegramBot:
             if free_check == 1:
                 # Free user - send with protection
                 reply_markup = InlineKeyboardMarkup([[
-                    InlineKeyboardButton("💎 Get Premium to Forward", url="https://t.me/kingofpatal")
+                    InlineKeyboardButton("💎 Get Premium to Forward", url="http://t.me/Connecting_iBot")
                 ]])
                 await app.copy_message(target_chat_id, LOG_GROUP, result.id, protect_content=True, reply_markup=reply_markup)
             else:
